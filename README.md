@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Smart City Traffic Assistant** is an AI-powered application that provides real-time traffic advice using the [TomTom Traffic API](https://developer.tomtom.com/traffic-api) and integrates with OpenAI's GPT-4 model. The assistant fetches current traffic data and offers personalized route suggestions for drivers navigating busy city streets.
+**Smart City Traffic Assistant** is an AI-powered application that provides real-time traffic advice using the [TomTom Traffic API](https://developer.tomtom.com/traffic-api) and integrates with OpenAI's GPT-4 model. The assistant fetches current traffic data and offers personalized route suggestions for drivers navigating busy city streets. The app is built using Flask to create a user friendly web interface.
 
 The project aims to demonstrate real-world AI integration with live data, focusing on optimizing travel time and route planning.
 
@@ -13,6 +13,9 @@ The project aims to demonstrate real-world AI integration with live data, focusi
 - **Real-Time Traffic Data**: Retrieves up-to-the-minute traffic information using the TomTom Traffic API.
 - **AI-Powered Advice**: Uses GPT-4 to provide smart and personalized route suggestions based on real-time data.
 - **Dynamic Responses**: Provides detailed, human-like responses for optimal navigation.
+- **Flask Web Interface**: Allows users to input their origin and destination via a web interface for easy access.
+- **Flexible Time Formatting**: Displays total travel time in minutes or hours based on the duration of the trip.
+- **Integer-Based Output**: All travel times and distances are now displayed as whole numbers for simplicity.
 - **Scalability**: Future updates will include public transport information, carbon footprint estimates, and multi-route suggestions.
 
 ---
@@ -20,6 +23,7 @@ The project aims to demonstrate real-world AI integration with live data, focusi
 ## Technology Stack
 
 - **Backend**: Python
+- **Web Framework**: Flask
 - **AI Integration**: OpenAI GPT-4 via `openai` API
 - **Traffic Data**: TomTom Traffic API for real-time traffic conditions
 - **Environment Management**: Python virtual environments (`venv`)
@@ -94,7 +98,7 @@ cd smart-city-traffic-assistant
 
    Please note that traffic conditions are dynamic, and this guidance is based on current congestion data. Always aim to leave extra time for your journey.
 
-   It will approximately take under 20 minutes to reach by road, which is a short distance of about 3.41 miles.
+   It will approximately take under 20 minutes to reach by road, which is a short distance of about 3 miles.
    ```
 
 ---
