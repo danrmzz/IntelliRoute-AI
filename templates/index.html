@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City Traffic Assistant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="submit"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 400px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Smart City Traffic Assistant</h1>
+    
+    <form method="POST">
+        <label for="origin">Origin:</label>
+        <input type="text" id="origin" name="origin" placeholder="Enter starting location" required>
+
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" placeholder="Enter destination" required>
+
+        <input type="submit" value="Get Traffic Advice">
+    </form>
+
+    {% if traffic_info and ai_response %}
+    <div class="result">
+        <h3>Traffic Info:</h3>
+        <p>{{ traffic_info }}</p>
+
+        <h3>AI Response:</h3>
+        <p>{{ ai_response }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
