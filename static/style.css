@@ -38,7 +38,7 @@ body {
 }
 
 .everything {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     position: relative;
     z-index: 10;
     top: 3%;
