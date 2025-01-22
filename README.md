@@ -1,8 +1,8 @@
-# Smart City Traffic Assistant
+# IntelliRoute AI
 
 ## Overview
 
-**Smart City Traffic Assistant** is an AI-powered application that provides real-time traffic advice using the [TomTom Traffic API](https://developer.tomtom.com/traffic-api) and integrates with OpenAI's GPT-4 model. The assistant fetches current traffic data and offers personalized route suggestions for drivers navigating busy city streets. The app is built using Flask to create a user friendly web interface.
+**IntelliRoute AI** is an AI-powered application that provides real-time traffic advice using the [TomTom Traffic API](https://developer.tomtom.com/traffic-api) and integrates with OpenAI's GPT-4 model. The assistant fetches current traffic data and offers personalized route suggestions for drivers navigating busy city streets. The app is built using Flask to create a user friendly web interface.
 
 The project aims to demonstrate real-world AI integration with live data, focusing on optimizing travel time and route planning.
 
