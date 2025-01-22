@@ -86,9 +86,9 @@ def index():
         # Print the AI response
         ai_response = response['choices'][0]['message']['content']
 
-        return render_template('index.html', traffic_info=traffic_info, ai_response=ai_response)
+        return render_template('results.html', traffic_info=traffic_info, ai_response=ai_response, tomtom_api_key=TOMTOM_API_KEY)
     
-    return render_template('index.html', traffic_info=None, ai_response=None)
+    return render_template('index.html', traffic_info=None, ai_response=None, tomtom_api_key=TOMTOM_API_KEY)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)

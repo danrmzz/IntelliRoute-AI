@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: Poppins;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: lightgray;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    /* border: 2px solid black; */
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.car {
+    position: absolute;
+    /* border: 2px solid black; */
+    z-index: 1;
+    top: -100px;
+}
+
+.car img {
+
+    width: 500px;
+}
+
+.everything {
+    /* border: 2px solid black; */
+    position: relative;
+    z-index: 10;
+    top: 3%;
+    
+
+}
+
+.title {
+    color: rgb(0, 0, 0);
+    /* border: 2px solid black; */
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 2vh;
+    font-size: 20px;
+    margin-bottom: 70px;
+    
+}
+
+.title h1 {
+    margin: 0px;
+}
+
+
+.origin {
+    /* border: 2px solid black; */
+    justify-content: left;
+
+}
+
+.destination {
+    /* border: 2px solid black; */
+
+}
+
+.button {
+    /* border: 2px solid black; */
+    display: inline-block;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+/* Form Stuff */
+
+
+
+form .form-group{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    font-size: 16px;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    
+    
+
+}
+
+form .origin,
+form .destination {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
+    width: 15%; 
+    max-width: 400px; 
+    width: 38%;
+}
+
+/* The actual words "Origin" and ""Destination */
+form .origin label,
+form .destination label {
+    margin-right: 20px; 
+    width: 120px; 
+    text-align: left; 
+}
+
+form .origin input,
+form .destination input {
+    flex: 1;
+    padding: 8px;
+    box-sizing: border-box;
+    text-align: center; 
+    font-size: 16px;
+}
+
+form label {
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+}
+
+form input[type="submit"] {
+    padding: 10px 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+
+}
+
+form input[type="submit"]:hover {
+    background-color: #a5a5a5; /* Darker green on hover */
+}
+
+
+/* suggestions stuff */
+.suggestions {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 65px;
+    font-size: 15px;
+    width: 37%;
+}
+
+
+.suggestions div {
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.suggestions div:hover {
+    background-color: #f0f0f0;
+}

@@ -4,53 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart City Traffic Assistant</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        label {
-            font-weight: bold;
-        }
-        input[type="text"], input[type="submit"] {
-            padding: 10px;
-            margin: 10px 0;
-            width: 100%;
-            max-width: 400px;
-        }
-        .result {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3774/3774278.png" type="image/x-icon">
 </head>
 <body>
-    <h1>Smart City Traffic Assistant</h1>
-    
-    <form method="POST">
-        <label for="origin">Origin:</label>
-        <input type="text" id="origin" name="origin" placeholder="Enter starting location" required>
 
-        <label for="destination">Destination:</label>
-        <input type="text" id="destination" name="destination" placeholder="Enter destination" required>
+    <div class="container">
 
-        <input type="submit" value="Get Traffic Advice">
-    </form>
+        <div class="car">
+            <img src="static\car.png">
+        </div>
 
-    {% if traffic_info and ai_response %}
-    <div class="result">
-        <h3>Traffic Info:</h3>
-        <p>{{ traffic_info }}</p>
+        
 
-        <h3>AI Response:</h3>
-        <p>{{ ai_response }}</p>
-    </div>
-    {% endif %}
+
+        
+        <div class="everything">
+
+            <div class="title">
+                <h1>Smart City Traffic Assistant</h1>
+            </div>
+        
+            
+            <form method="POST" id="trafficForm">
+                <div class="form-group">
+                    <div class="origin">
+                        <label for="origin">Origin:</label>
+                        <input type="text" id="origin" name="origin" placeholder="Enter starting location" required autocomplete="off">
+                        <div id="origin-suggestions" class="suggestions"></div>
+                    </div>
+                    <div class="destination">
+                        <label for="destination">Destination:</label>
+                        <input type="text" id="destination" name="destination" placeholder="Enter destination" required autocomplete="off">
+                        <div id="destination-suggestions" class="suggestions"></div>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Go!" id="go-button">
+                    <div id="loading-gif" style="display: none;">
+                        <img src="static/loading.gif" alt="Loading..." style="height: 30px; width: 30px;">
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+
+
+
+
+        <!--
+        <div id="result-section" style="display: none;">
+            {% if traffic_info and ai_response %}
+            <div class="result">
+                <h3>Traffic Info:</h3>
+                <p>{{ traffic_info }}</p>
+
+                <h3>AI Response:</h3>
+                <p>{{ ai_response }}</p>
+            </div>
+            {% endif %}
+        </div> -->
+
+    <script>
+        const TOMTOM_API_KEY = "{{ tomtom_api_key }}";
+    </script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
