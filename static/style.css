@@ -15,7 +15,7 @@ body {
 .container {
     text-align: center;
     position: relative;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 90%;
     height: 90%;
     display: flex;
@@ -26,12 +26,13 @@ body {
 }
 
 .car {
-    position: absolute;
+    position: relative;
     /* border: 2px solid black; */
     z-index: 1;
     /* top: -100px; */
-    top: 0px;
-    display: inline-block;
+    top: 0vw;
+    display: inline;
+   
     
 }
 
@@ -44,7 +45,7 @@ body {
     /* border: 2px solid black; */
     position: relative;
     z-index: 10;
-    top: 3%;
+    top: -10vw;
     
 
 }
