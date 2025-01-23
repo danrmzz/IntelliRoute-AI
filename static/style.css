@@ -15,7 +15,7 @@ body {
 .container {
     text-align: center;
     position: relative;
-    /* border: 2px solid black; */
+    border: 2px solid black;
     width: 90%;
     height: 90%;
     display: flex;
@@ -29,12 +29,15 @@ body {
     position: absolute;
     /* border: 2px solid black; */
     z-index: 1;
-    top: -100px;
+    /* top: -100px; */
+    top: 0px;
+    display: inline-block;
+    
 }
 
 .car img {
 
-    width: 500px;
+    width: 300px;
 }
 
 .everything {
@@ -188,4 +191,13 @@ form input[type="submit"]:hover {
 
 .suggestions div:hover {
     background-color: #f0f0f0;
+}
+
+
+
+/* Media query for input box text shrinking */
+@media (max-width: 470px) {
+    input {
+        font-size: 13px !important; /* Adjust the value as needed */
+    }
 }
